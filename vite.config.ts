@@ -8,6 +8,21 @@ const pigmentConfig = {
   theme: createTheme({
     cssVariables: true,
     colorSchemes: { light: true, dark: true },
+    components: {
+      MuiFab: {
+        styleOverrides: {
+          root: {
+            variants: [
+              {
+                props: { variant: "extended" },
+                style: { borderRadius: 12 },
+              },
+            ],
+          },
+          extended: {},
+        },
+      },
+    },
   }),
   transformLibraries: ["@mui/material"],
 };
